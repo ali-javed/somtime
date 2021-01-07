@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import setuptools
 
-__version__ = "1.0.3"
+__version__ = "1.0.6"
 
 
 CLASSIFIERS = [
@@ -33,5 +33,5 @@ setuptools.setup(
     license="",
     download_url = "https://github.com/ali-javed/somtime/archive/1.0.1.tar.gz",
     url="https://github.com/ali-javed/somtime",
-    install_requires=['numpy','matplotlib','scipy','random']
+    install_requires=['numpy','matplotlib']
 )
