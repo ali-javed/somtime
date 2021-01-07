@@ -1,13 +1,10 @@
 #python libraries needed in code
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.spatial import distance
 from dtw_d import dtw_d
 from scipy.spatial.distance import euclidean
 import matplotlib.pyplot as plt
 import copy
-import csv
-import random
 from collections import defaultdict
 
 class SelfOrganizingMap:
@@ -261,7 +258,7 @@ class SelfOrganizingMap:
         self.Umatrix = self.createUmatrix(windowSize)
         
         if len(path)>0:
-            all_data = self.plotMap(inputs, epoch, showPlot, windowSize,path,targets,labels = labels,Umatrix = self.Umatrix,legend_dict  = legend_dict ,write = True) #,
+            all_data = self.plotMap(inputs, epoch, showPlot, windowSize,path,targets,labels = labels,Umatrix = self.Umatrix,legend_dict  = legend_dict ,write = False) #,
         
             self.plotChange(weight_change_magnitude,showPlot, path)
         
@@ -426,13 +423,7 @@ class SelfOrganizingMap:
             #if len(targets)> 0:
             #    plt.annotate(targets[i], (x, y), fontsize=22)
 
-        if write == True:
-            fname = '../output/SOM_coordinates.csv'
-            fopen = open(fname, 'w')
-            csvw = csv.DictWriter(fopen, fieldnames=['target','x','y','labels'])
-            csvw.writeheader()
-            csvw.writerows(all_data)
-            fopen.close()
+
 
                 
         
