@@ -1,1 +1,2 @@
-from SelfOrganizingMap import *
+from somtime.SelfOrganizingMap import SelfOrganizingMap
+
