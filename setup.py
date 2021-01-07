@@ -3,8 +3,6 @@ import setuptools
 
 __version__ = "1.0.1"
 
-with open("README.md","r") as fh:
-    long_description = fh.read()
 
 CLASSIFIERS = [
     "Development Status :: 5 - Production/Stable",
@@ -26,13 +24,14 @@ CLASSIFIERS = [
 setuptools.setup(
     name="somtime",
     version=__version__,
-    description="Python implementation of Time Series Self Organizing Map",
-    long_description = long_description,
+    description="Python implementation of Self Organizing Map with capability to use Dynamic Time Warping (DTW) as a distance measure.",
+    long_description = "Self Organizing Map with capability to use Dynamic Time Warping (DTW) as a distance measure for time series based data. For non time-series data Euclidean distance can be used by setting window size to 0. The SOM can be used for both univariate time series data and multi-variate time series data.",
     author="A. Javed",
     author_email="alijaved@live.com",
     packages=setuptools.find_packages(),
     zip_safe=True,
     license="",
+    download_url = "https://github.com/ali-javed/somtime/archive/1.0.1.tar.gz",
     url="https://github.com/ali-javed/somtime",
-    install_requires=['numpy','matplotlib','scipy','copy','csv','random','collections']
+    install_requires=['numpy','matplotlib','scipy','copy','csv','random']
 )
