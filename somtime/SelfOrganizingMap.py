@@ -524,7 +524,7 @@ class SelfOrganizingMap:
         for i in range(s1_shape[2]):
             for j in range(max(0, i - w), min(s2_shape[2], i + w)):
                 #squared euc distance
-                dist = sq_euc(s1[0,:,i], s2[0,:,j])
+                dist = self.sq_euc(s1[0,:,i], s2[0,:,j])
                 #find optimal path
                 DTW[(i, j)] = dist + min(DTW[(i - 1, j)], DTW[(i, j - 1)], DTW[(i - 1, j - 1)])
 
