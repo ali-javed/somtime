@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from setuptools
+import setuptools
 
 __version__ = "1.0.1"
 
@@ -23,7 +23,7 @@ CLASSIFIERS = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
-setup(
+setuptools.setup(
     name="somtime",
     version=__version__,
     description="Python implementation of Time Series Self Organizing Map",
@@ -33,6 +33,6 @@ setup(
     packages=setuptools.find_packages(),
     zip_safe=True,
     license="",
-    url="",
+    url="https://github.com/ali-javed/somtime",
     install_requires=['numpy','matplotlib','scipy','copy','csv','random','collections']
 )
